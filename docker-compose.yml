@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+    playground:
+        image: perseus-mre-78
+        container_name: perseus-mre-78
+        build:
+            context: ./
+        network_mode: host
+        volumes:
+            - type: bind
+              source: ./
+              target: /app
+        stdin_open: true
+        tty: true

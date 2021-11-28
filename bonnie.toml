@@ -1,0 +1,4 @@
+version = "0.3.2"
+
+[scripts]
+sh = "docker-compose run --entrypoint \"/bin/bash\" --use-aliases --rm playground"
