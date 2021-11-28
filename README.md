@@ -2,6 +2,10 @@
 
 This is a miimum reproducible example for [Perseus](https://github.com/arctic-hen7/perseus) issue [#78](https://github.com/arctic-hen7/perseus/issues/78), which pertains to an issue that only occurs on Arch Linux. For that reason, this repository contains a `Dockerfile` and a `docker-compose.yml` for creating an Arch environment in which the issue can be replicated.
 
+## Resolution
+
+This issue was resolved by downgrading `wasm-pack` to v0.9.1. The latest version includes a bug described [here](https://github.com/rustwasm/wasm-pack/issues/823) that causes a segmentation fault on Arch-based systems (due to an OpenSSL issue). The `Dockerfile` for this repository now includes the downgraded version of `wasm-pack`.
+
 ## Usage
 
 ### Prerequisites
